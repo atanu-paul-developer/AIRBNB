@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md bg-body-tertiatry border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-regular fa-compass"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/listings"><b>Explore</b></a>
+        </div>
+        <nav class="navbar ms-auto" style="height: fit-content;">
+          <div class="container-fluid">
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 col-10" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-danger" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new"><b>Airbnb your Home</b></a>
+        <div class="btn-group dropstart">
+          <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style= "color: white !important;">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li>
+              <% if(!currUser) { %>
+              <a class="nav-link dropdown-item" style= "color: white !important;" aria-current="page" href="/signup"><b>Sign-Up</b></a>
+              <a class="nav-link dropdown-item" style= "color: white !important;" href="/login"><b>Login</b></a>
+              <% } %>
+            </li>
+            <li>
+              <% if(currUser) { %>
+              <a class="nav-link dropdown-item" style= "color: white !important;" href="/logout"><b>Logout</b></a>
+              <% } %>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+</nav>
+
