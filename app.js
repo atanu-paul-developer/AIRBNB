@@ -109,10 +109,6 @@ app.listen(port, () => {
     console.log("server is connected to port: 3000");
 })
 
-app.get("/", (req, res) => {
-    res.send("server is runnig");
-})
-
 // standard error give when nothing will match it will give ||
 
 app.all("*", (req, res, next) => {
